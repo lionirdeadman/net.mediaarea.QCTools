@@ -61,17 +61,13 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/qctools/0.9/qctools_0.9.tar.xz",
-          "sha256": "e0a0a13fc07847269acbc05fbd4658f64a8b0fefb07ed4a92cfac480ddaa036e"
+          "url": "https://mediaarea.net/download/source/qctools/1.0/qctools_1.0.tar.xz",
+          "sha256": "cba6fcf3a2f06ad708cf056541a0085ab9faded10c84ed6fbedf908ab292339e"
         },
         {
             "type": "patch",
             "path": "disable-qcli.patch",
             "options": [ "--binary" ]
-        },
-        {
-            "type": "patch",
-            "path": "use_system_libs.patch"
         },
         {
             "type": "file",
