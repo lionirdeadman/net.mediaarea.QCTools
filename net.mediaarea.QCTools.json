@@ -76,12 +76,16 @@
         {
             "type": "file",
             "path": "net.mediaarea.QCTools.appdata.xml"
+        },
+        {
+            "type": "file",
+            "path": "qctools.png"
         }
       ],
       "post-install": [
         "install -D -m 0755 qctools-gui/QCTools /app/bin/QCTools",
         "install -D -m 0644 ../GNU/GUI/qctools.desktop /app/share/applications/qctools.desktop",
-        "install -D -m 0644 ../../Source/Resource/Logo.png /app/share/icons/hicolor/256x256/apps/qctools.png",
+        "install -D -m 0644 ../../qctools.png /app/share/icons/hicolor/256x256/apps/qctools.png",
         "install -D -m 0644 ../../net.mediaarea.QCTools.appdata.xml /app/share/metainfo/net.mediaarea.QCTools.appdata.xml"
       ]
     }
