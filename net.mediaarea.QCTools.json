@@ -28,8 +28,8 @@
       "sources":[
          {
            "type":"archive",
-           "url":"https://www.ffmpeg.org/releases/ffmpeg-3.4.1.tar.gz",
-           "sha256":"3b6824f2c3ddd6bde37b82f76c679867f5c18d0c040cea222afd93aac9bf7ad2"
+           "url":"https://www.ffmpeg.org/releases/ffmpeg-4.2.2.tar.gz",
+           "sha256":"83f9a9aa0acf8036daf47494d99a8c31154a18ebb6841d89878ba47783559bd0"
          }
       ]
     },
@@ -56,17 +56,20 @@
     {
       "name": "qctools",
       "subdir": "Project/QtCreator",
+      "builddir": true,
       "buildsystem": "qmake",
-      "config-opts": [ "QCTOOLS_USE_SYSTEM=true" ],
+      "config-opts": [ "QCTOOLS_USE_SYSTEM=true", "CONFIG+=ordered", "QMAKE_CFLAGS_ISYSTEM=-I" ],
+      "make-args": [ "sub-qctools-gui" ],
+      "no-make-install": true,
       "sources": [
         {
           "type": "archive",
-          "url": "https://mediaarea.net/download/source/qctools/1.0/qctools_1.0.tar.xz",
-          "sha256": "cba6fcf3a2f06ad708cf056541a0085ab9faded10c84ed6fbedf908ab292339e"
+          "url": "https://mediaarea.net/download/source/qctools/1.1/qctools_1.1.tar.xz",
+          "sha256": "0114312e64dd489c4f68f2b78a27a05163e64a98644d2e9d5c50b9c154905df7"
         },
         {
             "type": "patch",
-            "path": "disable-qcli.patch",
+            "path": "use-system-libraries.patch",
             "options": [ "--binary" ]
         },
         {
@@ -80,9 +83,9 @@
       ],
       "post-install": [
         "install -D -m 0755 qctools-gui/QCTools /app/bin/QCTools",
-        "install -D -m 0644 ../GNU/GUI/qctools.desktop /app/share/applications/qctools.desktop",
-        "install -D -m 0644 ../../qctools.png /app/share/icons/hicolor/256x256/apps/qctools.png",
-        "install -D -m 0644 ../../net.mediaarea.QCTools.appdata.xml /app/share/metainfo/net.mediaarea.QCTools.appdata.xml"
+        "install -D -m 0644 ../../GNU/GUI/qctools.desktop /app/share/applications/qctools.desktop",
+        "install -D -m 0644 ../../../qctools.png /app/share/icons/hicolor/256x256/apps/qctools.png",
+        "install -D -m 0644 ../../../net.mediaarea.QCTools.appdata.xml /app/share/metainfo/net.mediaarea.QCTools.appdata.xml"
       ]
     }
   ]
