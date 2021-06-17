@@ -71,6 +71,10 @@
           "sha256": "cc73f46a24c6181912c233be6508480e8f0e4b618052a447a864afd3e8d5a167"
         },
         {
+            "type": "patch",
+            "path": "aarch64-build.patch"
+        },
+        {
             "type": "file",
             "path": "net.mediaarea.QCTools.appdata.xml"
         },
